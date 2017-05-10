@@ -1,0 +1,32 @@
+box: python:3.6.0
+dev:
+  steps:
+    - pip-install
+
+    - script:
+        name: nltk punkt install
+        code: |
+          python -m nltk.downloader punkt
+
+    - internal/watch:
+        code: python server.py
+        reload: true
+
+build:
+  steps:
+    - pip-install
+
+    - script:
+        name: nltk punkt install
+        code: |
+          python -m nltk.downloader punkt
+
+    - script:
+        name: python unit test
+        code: |
+          nosetests server_tests.py
+
+deploy:
+  steps:
+    - heroku-deploy:
+        key-name: HEROKU
