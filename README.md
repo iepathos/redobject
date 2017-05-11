@@ -1,7 +1,7 @@
 # Marlowe Objectivity
 
 
-[![wercker status](https://app.wercker.com/status/c99eaec92cfe7bf8bd10050fc568d62c/s/master "wercker status")](https://app.wercker.com/project/byKey/c99eaec92cfe7bf8bd10050fc568d62c)
+[![wercker status](https://app.wercker.com/status/87bd743ddc37806e1b9171071d727b59/s/master "wercker status")](https://app.wercker.com/project/byKey/87bd743ddc37806e1b9171071d727b59)
 
 
 This API uses a NaiveBayes approach trained on reddit comments to determine the relative objectivity of text.  This is an open source part of [Project Marlowe](https://github.com/iepathos/marlowe_devops)
