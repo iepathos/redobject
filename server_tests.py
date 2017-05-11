@@ -18,7 +18,7 @@ class ServerTestCase(unittest.TestCase):
             'text': 'This is some random text.',
         }
         expected_data = {
-            "objectivity": 0.5
+            "objectivity": 0.0
         }
         response = self.app.post('/', data=data, follow_redirects=True)
         response_json = json.loads(response.data)
@@ -29,7 +29,7 @@ class ServerTestCase(unittest.TestCase):
             'text': 100,
         }
         expected_data = {
-            "objectivity": 1.0
+            "objectivity": 0.0
         }
         response = self.app.post('/', data=data, follow_redirects=True)
         response_json = json.loads(response.data)
@@ -40,7 +40,7 @@ class ServerTestCase(unittest.TestCase):
             'text': u'\u2019',
         }
         expected_data = {
-            "objectivity": 1.0
+            "objectivity": 0.0
         }
         response = self.app.post('/', data=data, follow_redirects=True)
         response_json = json.loads(response.data)

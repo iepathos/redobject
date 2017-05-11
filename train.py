@@ -30,6 +30,6 @@ with open('../dataset/objectivity.json', 'r') as fp:
 logger.warning('Loaded dataset, training classifier')
 logger.warning('Length of training data %s' % len(train_data))
 cl = NaiveBayesClassifier(train_data)
-cl.accuracy(test_data)
+logger.warning(cl.accuracy(test_data))
 
 save_classifier(cl)
