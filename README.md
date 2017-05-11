@@ -8,6 +8,8 @@ This API uses a NaiveBayes approach trained on reddit comments to determine the 
 
 JSON API Server accepts text and returns an objectivity score.
 
+API hosted at [https://secure-basin-62593.herokuapp.com/](https://secure-basin-62593.herokuapp.com/)
+
 
 ## Testing
 ````shell
