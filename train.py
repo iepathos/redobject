@@ -21,15 +21,16 @@ def load_classifier():
     return classifier
 
 
-logger.warning('Loading objectivity dataset')
-with open('../dataset/objectivity.json', 'r') as fp:
-    # split data to train and test data, going with 80/20 to start
-    dataset = json.load(fp)
-    train_data = dataset[int(len(dataset) * .2):]
-    test_data = dataset[:int(len(dataset) * .2)]
-logger.warning('Loaded dataset, training classifier')
-logger.warning('Length of training data %s' % len(train_data))
-cl = NaiveBayesClassifier(train_data)
-logger.warning(cl.accuracy(test_data))
+if __name__ == '__main__':
+    logger.warning('Loading objectivity dataset')
+    with open('../dataset/objectivity.json', 'r') as fp:
+        # split data to train and test data, going with 80/20 to start
+        dataset = json.load(fp)
+        train_data = dataset[int(len(dataset) * .2):]
+        test_data = dataset[:int(len(dataset) * .2)]
+    logger.warning('Loaded dataset, training classifier')
+    logger.warning('Length of training data %s' % len(train_data))
+    cl = NaiveBayesClassifier(train_data)
+    logger.warning(cl.accuracy(test_data))
 
-save_classifier(cl)
+    save_classifier(cl)

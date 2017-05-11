@@ -42,4 +42,4 @@ if __name__ == '__main__':
         debug = True
     else:
         debug = False
-    app.run(debug=debug, host='0.0.0.0')
+    app.run(debug=debug, host='0.0.0.0', port=int(os.environ.get('PORT', '5000')))

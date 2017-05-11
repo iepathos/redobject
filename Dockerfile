@@ -10,7 +10,9 @@ RUN pip install -r requirements.txt
 
 RUN python -m nltk.downloader punkt
 
-RUN git clone https://github.com/iepathos/marlowe_dataset.git
+# If running train in docker uncomment clone then can use dataset/objectivity.json
+# I normally just run this on the host though
+# RUN git clone https://github.com/iepathos/marlowe_dataset.git
 
 ENTRYPOINT ["python"]
 CMD ["server.py"]
